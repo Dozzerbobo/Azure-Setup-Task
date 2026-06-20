@@ -1,0 +1,57 @@
+Azure Foundations Summary Report
+
+Verification of Azure Subscription
+
+An active Microsoft Azure subscription was successfully accessed and used to deploy cloud resources. The Azure Portal confirms that Azure Subscription 1 is active and available for resource deployment and management.
+
+Resource Group Confirmation
+
+A resource group named FirstStep was created to organize and manage Azure resources deployed during this exercise.
+
+Resource Details
+
+- Resource Group: FirstStep
+- Virtual Machine: firstttt
+- Operating System: Ubuntu Linux
+- Region: South Africa North
+- Subscription: Azure Subscription 1
+
+The virtual machine deployment completed successfully, and the associated networking and storage resources were automatically provisioned within the resource group.
+
+Region Selection
+
+The selected deployment region was South Africa North.
+
+This region was chosen because it provides reliable Azure service availability within Africa, offers reduced latency for users in the region, and supports the required cloud services for this deployment.
+
+Shared Responsibility Model
+
+Microsoft Azure operates under a Shared Responsibility Model, where responsibilities are shared between Microsoft and the customer.
+
+Microsoft Responsibilities
+
+- Physical security of data centers
+- Hardware maintenance
+- Network infrastructure
+- Cloud platform availability
+- Host operating system security
+
+Customer Responsibilities
+
+- User account and identity management
+- Access control and permissions
+- Data protection and backups
+- Virtual machine configuration
+- Application and workload security
+
+For this deployment, Microsoft manages the underlying cloud infrastructure while the customer manages the deployed virtual machine, user access, and resource configurations.
+
+Cost Management
+
+Azure Cost Management and Billing services were accessed successfully. A monthly budget of $10.00 was configured to monitor cloud spending and help prevent unexpected charges.
+
+This demonstrates the use of Azure budgeting and cost-control features to manage resource costs effectively.
+
+Conclusion
+
+The Azure environment was successfully configured with an active subscription, resource group, virtual machine deployment, and cost management controls. This exercise demonstrates practical knowledge of Azure resource deployment, resource organization, regional selection, budgeting, and the Shared Responsibility Model.
