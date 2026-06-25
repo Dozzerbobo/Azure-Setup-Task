@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+
+  "parameters": {
+    "vmName": {
+      "type": "string",
+      "defaultValue": "firstttt"
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "South Africa North"
+    },
+    "adminUsername": {
+      "type": "string",
+      "defaultValue": "azureuser"
+    }
+  },
+
+  "variables": {},
+
+  "resources": [
+    {
+      "type": "Microsoft.Network/virtualNetworks",
+      "apiVersion": "2023-05-01",
+      "name": "firstttt-vnet",
+      "location": "[parameters('location')]"
+    },
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "apiVersion": "2023-05-01",
+      "name": "firstttt-ip",
+      "location": "[parameters('location')]"
+    },
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2023-05-01",
+      "name": "firstttt-nsg",
+      "location": "[parameters('location')]"
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines",
+      "apiVersion": "2023-03-01",
+      "name": "[parameters('vmName')]",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "firstttt-ip",
+        "firstttt-vnet",
+        "firstttt-nsg"
+      ]
+    }
+  ],
+
+  "outputs": {
+    "vmName": {
+      "type": "string",
+      "value": "[parameters('vmName')]"
+    }
+  }
+}
